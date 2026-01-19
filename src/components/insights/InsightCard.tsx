@@ -1,0 +1,26 @@
+type Props = {
+  title: string;
+  category: string;
+  date: string;
+  readTime: string;
+  image: string;
+};
+
+const InsightCard = ({ title, category, date, readTime, image }: Props) => {
+  return (
+    <div className="bg-[#121A2A] rounded-xl overflow-hidden hover:translate-y-[-4px] transition">
+      <img src={image} className="h-44 w-full object-cover" />
+      <div className="p-4">
+        <span className="text-xs text-[#2563EB] uppercase">{category}</span>
+        <h3 className="mt-2 text-white font-semibold text-xl hover:underline hover:cursor-pointer">
+          {title}
+        </h3>
+        <p className="mt-2 text-xs text-[#94A3B8]">
+          {date} • {readTime}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default InsightCard;
