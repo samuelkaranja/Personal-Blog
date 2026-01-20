@@ -11,7 +11,7 @@ const NavBar: React.FC = () => {
         <div className="hidden md:flex items-center gap-8 text-sm text-muted">
           <Link to="/">Home</Link>
           <Link to="/articles">Articles</Link>
-          <Link to="/dashboard">Dashboard</Link>
+          <Link to="/admin/dashboard">Dashboard</Link>
         </div>
 
         <div className="flex items-center gap-4">

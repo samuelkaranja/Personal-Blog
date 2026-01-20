@@ -21,4 +21,5 @@ export { default as MoreArticles } from "./sidebar/MoreArticles";
 export { default as ReadingProgress } from "./sidebar/ReadingProgress";
 export { default as Sidebar } from "./dashboard/Sidebar";
 export { default as Topbar } from "./dashboard/Topbar";
-export { default as RichTextEditor } from "./dashboard/editor/RichTextEditor";
+export { default as EditorBreadcrumb } from "./dashboard/editor/EditorBreadcrumb";
+export { default as ArticleEditor } from "./dashboard/editor/ArticleEditor";

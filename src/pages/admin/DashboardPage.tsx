@@ -1,4 +1,4 @@
-import { RichTextEditor, Sidebar, Topbar } from "../../components";
+import { ArticleEditor, EditorBreadcrumb, Sidebar, Topbar } from "../../components";
 
 const DashboardPage = () => {
   return (
@@ -13,7 +13,8 @@ const DashboardPage = () => {
         <main className="flex-1 p-4 lg:p-6 grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-6">
           {/* Editor */}
           <div className="bg-[#121A2A] rounded-2xl p-6">
-            <RichTextEditor />
+            <EditorBreadcrumb />
+            <ArticleEditor />
             {/* <EditorBreadcrumb />
             <EditorTitleInput />
             <EditorToolbar />
