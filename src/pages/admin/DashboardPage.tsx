@@ -1,4 +1,11 @@
-import { ArticleEditor, EditorBreadcrumb, Sidebar, Topbar } from "../../components";
+import {
+  ArticleEditor,
+  ArticleSettings,
+  EditorBreadcrumb,
+  FeaturedImage,
+  Sidebar,
+  Topbar,
+} from "../../components";
 
 const DashboardPage = () => {
   return (
@@ -24,6 +31,8 @@ const DashboardPage = () => {
 
           {/* Right sidebar */}
           <div className="space-y-6">
+            <FeaturedImage />
+            <ArticleSettings />
             {/* <FeaturedImage />
             <ArticleSettings />
             <DraftsList /> */}
