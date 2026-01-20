@@ -9,9 +9,9 @@ const NavBar: React.FC = () => {
         </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm text-muted">
-          <a href="#">Home</a>
-          <a href="#">Articles</a>
-          <a href="#">Dashboard</a>
+          <Link to="/">Home</Link>
+          <Link to="/articles">Articles</Link>
+          <Link to="/dashboard">Dashboard</Link>
         </div>
 
         <div className="flex items-center gap-4">
