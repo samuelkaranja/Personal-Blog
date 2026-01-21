@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type ArticleCardProps = {
   title: string;
   excerpt: string;
@@ -24,13 +26,16 @@ const ArticleCard = ({
       />
 
       <div className="flex-1">
-        <span className="text-xs uppercase text-[#2563EB] font-medium">
+        <span className="text-xs uppercase text-[#2563EB] font-medium mb-2 block">
           {category}
         </span>
 
-        <h2 className="mt-2 text-lg sm:text-xl font-semibold text-white hover:cursor-pointer hover:underline">
+        <Link
+          to="/details"
+          className="mt-2 text-lg sm:text-xl font-semibold text-white hover:cursor-pointer hover:underline"
+        >
           {title}
-        </h2>
+        </Link>
 
         <p className="mt-2 text-sm text-[#94A3B8] line-clamp-2">{excerpt}</p>
 

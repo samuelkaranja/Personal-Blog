@@ -8,16 +8,22 @@ const NavBar: React.FC = () => {
           DEBUGGED
         </Link>
 
-        <div className="hidden md:flex items-center gap-8 text-sm text-muted">
-          <Link to="/">Home</Link>
-          <Link to="/articles">Articles</Link>
-          <Link to="/admin/dashboard">Dashboard</Link>
+        <div className="hidden md:flex items-center gap-8 text-sm text-[#94A3B8]">
+          <Link to="/" className="hover:underline">
+            Home
+          </Link>
+          <Link to="/articles" className="hover:underline">
+            Articles
+          </Link>
+          <Link to="/admin/dashboard" className="hover:underline">
+            Dashboard
+          </Link>
         </div>
 
         <div className="flex items-center gap-4">
           <input
             placeholder="Search articles..."
-            className="hidden bg-[#1e293b] sm:block bg-card text-sm rounded-lg px-3 py-3 text-white placeholder-muted outline-none"
+            className="hidden sm:block bg-[#121A2A] text-sm rounded-lg px-3 py-3 text-white placeholder-[#94A3B8] outline-none"
           />
           <button className="bg-[#135bec] text-white font-bold px-4 py-2 rounded-lg text-sm">
             Contact Me

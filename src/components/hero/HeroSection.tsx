@@ -1,5 +1,6 @@
 import Container from "../layout/Container";
 import Software from "../../assets/software.webp";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -24,12 +25,18 @@ const HeroSection = () => {
             </p>
 
             <div className="mt-8 flex gap-4">
-              <button className="bg-[#2563EB] px-6 py-3 rounded-lg text-white">
+              <Link
+                to="/articles"
+                className="bg-[#2563EB] px-6 py-3 rounded-lg text-white"
+              >
                 Read Articles →
-              </button>
-              <button className="bg-[#121A2A] px-6 py-3 rounded-lg text-white">
+              </Link>
+              <Link
+                to="https://samuel-karanja-portfolio.netlify.app/"
+                className="bg-[#121A2A] px-6 py-3 rounded-lg text-white"
+              >
                 My Portfolio
-              </button>
+              </Link>
             </div>
           </div>
 

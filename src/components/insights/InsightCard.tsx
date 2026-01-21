@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type Props = {
   title: string;
   category: string;
@@ -11,10 +13,15 @@ const InsightCard = ({ title, category, date, readTime, image }: Props) => {
     <div className="bg-[#121A2A] rounded-xl overflow-hidden hover:translate-y-[-4px] transition">
       <img src={image} className="h-44 w-full object-cover" />
       <div className="p-4">
-        <span className="text-xs text-[#2563EB] uppercase">{category}</span>
-        <h3 className="mt-2 text-white font-semibold text-xl hover:underline hover:cursor-pointer">
+        <span className="text-xs text-[#2563EB] uppercase block mb-2">
+          {category}
+        </span>
+        <Link
+          to="/details"
+          className="mt-2 text-white font-semibold text-xl hover:underline hover:cursor-pointer"
+        >
           {title}
-        </h3>
+        </Link>
         <p className="mt-2 text-xs text-[#94A3B8]">
           {date} • {readTime}
         </p>
