@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
+
 const Sidebar = () => {
   return (
     <aside className="hidden lg:flex w-64 flex-col bg-[#0B1220] border-r border-white/5 p-6">
       <div className="mb-10">
-        <p className="text-white font-semibold">debugged</p>
-        <p className="text-xs text-[#94A3B8]">Front-End Engineer</p>
+        <Link to="/" className="text-2xl text-white font-semibold underline">
+          debugged
+        </Link>
+        <p className="text-md text-[#94A3B8] mt-2">Front-End Engineer</p>
       </div>
 
       <nav className="space-y-2 text-sm">
@@ -21,7 +25,9 @@ const Sidebar = () => {
         </button>
       </nav>
 
-      <div className="mt-auto text-sm text-[#94A3B8]">Logout</div>
+      <div className="mt-auto text-md font-bold text-white text-center bg-red-600 p-2 rounded">
+        Logout
+      </div>
     </aside>
   );
 };
