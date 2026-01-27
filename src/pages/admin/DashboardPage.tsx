@@ -1,48 +1,24 @@
-import {
-  ArticleEditor,
-  ArticleSettings,
-  EditorBreadcrumb,
-  FeaturedImage,
-  Sidebar,
-  Topbar,
-} from "../../components";
-
-//import ArticleEditor from "../../components/editor/ArticleEditor";
-// import EditorContent from "../../components/editor/EditorContent";
-// import EditorToolbar from "../../components/editor/EditorToolbar";
+import RecentArticles from "../../components/dashboard/articles/RecentArticles";
+import TopHeader from "../../components/dashboard/header/TopHeader";
+import Sidebar from "../../components/dashboard/sidebar/Sidebar";
+import StatsGrid from "../../components/dashboard/stats/StatsGrid";
 
 const DashboardPage = () => {
   return (
-    <div className="min-h-screen bg-[#0B1220] flex">
-      {/* <Sidebar /> */}
+    <div className="min-h-screen bg-gray-50 flex">
       <Sidebar />
 
-      <div className="flex-1 flex flex-col">
-        {/* <Topbar /> */}
-        <Topbar />
+      <main className="flex-1 p-4 md:p-6 space-y-6">
+        <TopHeader />
 
-        <main className="flex-1 p-4 lg:p-6 grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-6">
-          {/* Editor */}
-          <div className="bg-[#121A2A] rounded-2xl p-6">
-            <EditorBreadcrumb />
-            <ArticleEditor />
-            {/* <EditorBreadcrumb />
-            <EditorTitleInput />
-            <EditorToolbar />
-            <EditorTextarea />
-            <EditorStats /> */}
-          </div>
+        <StatsGrid />
 
-          {/* Right sidebar */}
-          <div className="space-y-6">
-            <FeaturedImage />
-            <ArticleSettings />
-            {/* <FeaturedImage />
-            <ArticleSettings />
-            <DraftsList /> */}
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
+          <div className="xl:col-span-9">
+            <RecentArticles />
           </div>
-        </main>
-      </div>
+        </div>
+      </main>
     </div>
   );
 };
