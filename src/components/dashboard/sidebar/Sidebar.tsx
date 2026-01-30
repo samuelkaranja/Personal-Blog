@@ -11,6 +11,7 @@ import {
   X,
 } from "lucide-react";
 import Code from "../../../assets/code.jpg";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
@@ -67,8 +68,15 @@ const Sidebar = () => {
               className="w-11 h-11 rounded-full object-cover"
             />
             <div>
-              <p className="font-semibold leading-tight">debugged</p>
-              <span className="text-xs text-gray-500">Front-End Engineer</span>
+              <Link
+                to="/"
+                className="font-semibold leading-tight hover:underline"
+              >
+                debugged
+              </Link>
+              <span className="text-xs text-gray-500 block">
+                Front-End Engineer
+              </span>
             </div>
           </div>
 
