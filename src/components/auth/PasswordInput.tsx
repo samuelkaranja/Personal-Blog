@@ -19,7 +19,7 @@ const PasswordInput = ({ value, onChange }: Props) => {
           value={value}
           onChange={onChange}
           placeholder="**********"
-          className="w-full border rounded-lg px-3 py-2 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-emerald-400 rounded-lg px-3 py-2 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600"
         />
         <button
           type="button"

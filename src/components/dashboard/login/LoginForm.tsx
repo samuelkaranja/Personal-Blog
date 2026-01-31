@@ -35,15 +35,12 @@ const LoginForm = () => {
         </div>
       </div>
 
-      <Link
-        to="/"
-        className="text-center text-2xl font-semibold mb-1 hover:underline"
-      >
-        debugged
-      </Link>
-      <p className="text-center text-sm text-gray-500 mb-6">
-        Author Dashboard Access
-      </p>
+      <div className="text-center">
+        <Link to="/" className="text-2xl font-semibold mb-1 hover:underline">
+          debugged
+        </Link>
+        <p className="text-sm text-gray-500 mb-6">Author Dashboard Access</p>
+      </div>
 
       <form onSubmit={handleLogin} className="space-y-6">
         <div>
@@ -54,7 +51,7 @@ const LoginForm = () => {
             placeholder="name@debugged.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="mt-1 w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="mt-1 w-full border border-emerald-400 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600"
           />
         </div>
 
