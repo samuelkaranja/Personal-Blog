@@ -12,9 +12,11 @@ import {
 } from "lucide-react";
 import Code from "../../../assets/code.jpg";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../../context/AuthContext";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
+  const { signOut } = useAuth();
 
   const menuItems = [
     { label: "Dashboard", icon: <LayoutGrid size={18} />, active: true },
@@ -95,7 +97,10 @@ const Sidebar = () => {
 
         {/* Bottom section: Sign Out */}
         <div className="px-2 py-4 border-t">
-          <button className="flex items-center gap-3 text-sm text-gray-500 hover:text-red-500 transition">
+          <button
+            onClick={signOut}
+            className="flex items-center gap-3 text-sm text-gray-500 hover:text-red-500 transition"
+          >
             <LogOut size={18} />
             <span>Sign Out</span>
           </button>

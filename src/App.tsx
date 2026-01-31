@@ -4,6 +4,7 @@ import { ArticleDetailsPage, ArticlesPage, HomePage } from "./pages";
 import DashboardPage from "./pages/admin/DashboardPage";
 import MainLayout from "./components/layouts/MainLayout";
 import LoginPage from "./pages/admin/LoginPage";
+import ProtectedRoute from "./routes/ProtectedRoute";
 
 function App() {
   return (
@@ -16,7 +17,14 @@ function App() {
             <Route path="/details" element={<ArticleDetailsPage />} />
           </Route>
 
-          <Route path="/admin/dashboard" element={<DashboardPage />} />
+          <Route
+            path="/admin/dashboard"
+            element={
+              <ProtectedRoute>
+                <DashboardPage />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/admin/login" element={<LoginPage />} />
 
           <Route path="*" element={<HomePage />} />

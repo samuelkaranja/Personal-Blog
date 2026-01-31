@@ -1,29 +1,31 @@
 import { useState } from "react";
 import PasswordInput from "../../auth/PasswordInput";
-import { supabase } from "../../../supabase/supabaseClient";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../../context/AuthContext";
 
 const LoginForm = () => {
+  const { signIn } = useAuth();
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState("");
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setError(null);
+    setError("");
 
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-
-    if (error) {
-      setError(error.message);
+    try {
+      await signIn(email, password);
+      navigate("/admin/dashboard");
+    } catch (err: any) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   };
 
   return (
@@ -41,6 +43,10 @@ const LoginForm = () => {
         </Link>
         <p className="text-sm text-gray-500 mb-6">Author Dashboard Access</p>
       </div>
+
+      {error && (
+        <p className="text-sm text-center mb-3 text-red-600">{error}</p>
+      )}
 
       <form onSubmit={handleLogin} className="space-y-6">
         <div>
@@ -69,8 +75,6 @@ const LoginForm = () => {
             Forgot Password?
           </a>
         </div> */}
-
-        {error && <p className="text-sm text-red-600">{error}</p>}
 
         <button
           disabled={loading}

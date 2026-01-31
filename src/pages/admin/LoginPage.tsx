@@ -1,11 +1,8 @@
 import LoginForm from "../../components/dashboard/login/LoginForm";
-//import AuthHeader from "../../components/layout/AuthHeader";
 
 const LoginPage = () => {
   return (
     <div className="min-h-screen bg-[#0b1220] flex flex-col">
-      {/* <AuthHeader /> */}
-
       <main className="flex-1 flex items-center justify-center px-4">
         <LoginForm />
       </main>
