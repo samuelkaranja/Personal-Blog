@@ -1,14 +1,19 @@
 import { type ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 interface SidebarItemProps {
   label: string;
   icon: ReactNode;
   active?: boolean;
+  route?: string;
 }
 
-const SidebarItem = ({ label, icon, active }: SidebarItemProps) => {
+const SidebarItem = ({ label, icon, active, route }: SidebarItemProps) => {
   return (
-    <button
+    <Link
+      to={{
+        pathname: route,
+      }}
       className={`
         flex items-center gap-3 w-full px-4 py-3 rounded-xl text-sm font-medium
         transition-all duration-200
@@ -24,7 +29,7 @@ const SidebarItem = ({ label, icon, active }: SidebarItemProps) => {
       </span>
 
       <span>{label}</span>
-    </button>
+    </Link>
   );
 };
 

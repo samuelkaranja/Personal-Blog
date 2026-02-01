@@ -1,10 +1,15 @@
-import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { ArticleDetailsPage, ArticlesPage, HomePage } from "./pages";
+import {
+  ArticleDetailsPage,
+  ArticlesPage,
+  CreatePostPage,
+  HomePage,
+} from "./pages";
 import DashboardPage from "./pages/admin/DashboardPage";
 import MainLayout from "./components/layouts/MainLayout";
 import LoginPage from "./pages/admin/LoginPage";
 import ProtectedRoute from "./routes/ProtectedRoute";
+import AdminLayout from "./components/layouts/AdminLayout";
 
 function App() {
   return (
@@ -17,14 +22,25 @@ function App() {
             <Route path="/details" element={<ArticleDetailsPage />} />
           </Route>
 
-          <Route
-            path="/admin/dashboard"
-            element={
-              <ProtectedRoute>
-                <DashboardPage />
-              </ProtectedRoute>
-            }
-          />
+          <Route element={<AdminLayout />}>
+            <Route
+              path="/admin/dashboard"
+              element={
+                <ProtectedRoute>
+                  <DashboardPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin/createPost"
+              element={
+                <ProtectedRoute>
+                  <CreatePostPage />
+                </ProtectedRoute>
+              }
+            />
+          </Route>
+
           <Route path="/admin/login" element={<LoginPage />} />
 
           <Route path="*" element={<HomePage />} />

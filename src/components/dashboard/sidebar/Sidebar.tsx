@@ -19,7 +19,12 @@ const Sidebar = () => {
   const { signOut } = useAuth();
 
   const menuItems = [
-    { label: "Dashboard", icon: <LayoutGrid size={18} />, active: true },
+    {
+      label: "Dashboard",
+      icon: <LayoutGrid size={18} />,
+      route: "/admin/dashboard",
+      active: true,
+    },
     { label: "All Posts", icon: <FileText size={18} /> },
     { label: "Analytics", icon: <BarChart2 size={18} /> },
     { label: "Comments", icon: <MessageSquare size={18} /> },
@@ -90,6 +95,7 @@ const Sidebar = () => {
                 label={item.label}
                 icon={item.icon}
                 active={item.active}
+                route={item.route}
               />
             ))}
           </nav>

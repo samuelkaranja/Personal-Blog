@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const TopHeader = () => {
   return (
     <header className="bg-[#0b1220] border-b px-4 md:px-6 py-4 flex items-center justify-between rounded-2xl">
@@ -12,9 +14,12 @@ const TopHeader = () => {
         </button>
 
         {/* Create Post */}
-        <button className="bg-emerald-600 hover:bg-blue-700 text-white px-4 md:px-5 h-10 rounded-lg text-sm font-medium flex items-center gap-2">
+        <Link
+          to="/admin/createPost"
+          className="bg-emerald-600 hover:bg-blue-700 text-white px-4 md:px-5 h-10 rounded-lg text-sm font-medium flex items-center gap-2 hover:cursor-pointer"
+        >
           <span className="text-xl">+</span> Create New Post
-        </button>
+        </Link>
       </div>
     </header>
   );

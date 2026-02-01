@@ -1,9 +1,14 @@
+import Code from "../../../assets/code.jpg";
+
 const FeaturedImage = () => {
   return (
-    <div className="bg-[#121A2A] rounded-xl p-4">
-      <h3 className="text-white font-medium mb-3">Featured Image</h3>
-      <div className="border border-dashed border-white/20 rounded-lg h-40 flex items-center justify-center text-[#94A3B8] text-sm">
-        Click to upload or drag & drop
+    <div>
+      <label className="text-sm text-black font-medium">Featured Image</label>
+      <div className="mt-2 border border-gray-300 rounded-lg overflow-hidden">
+        <img src={Code} alt="Featured" className="w-full h-40 object-cover" />
+        <button className="w-full py-2 text-sm text-black hover:bg-gray-50">
+          Replace Image
+        </button>
       </div>
     </div>
   );

@@ -19,9 +19,3 @@ export { default as ArticlePagination } from "./article-details/ArticlePaginatio
 export { default as ShareArticle } from "./sidebar/ShareArticle";
 export { default as MoreArticles } from "./sidebar/MoreArticles";
 export { default as ReadingProgress } from "./sidebar/ReadingProgress";
-export { default as Sidebar } from "./dashboard/Sidebar";
-export { default as Topbar } from "./dashboard/Topbar";
-export { default as EditorBreadcrumb } from "./dashboard/editor/EditorBreadcrumb";
-export { default as ArticleEditor } from "./dashboard/editor/ArticleEditor";
-export { default as FeaturedImage } from "./dashboard/editor/FeaturedImage";
-export { default as ArticleSettings } from "./dashboard/editor/ArticleSettings";
