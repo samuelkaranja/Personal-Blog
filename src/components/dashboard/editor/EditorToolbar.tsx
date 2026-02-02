@@ -12,7 +12,7 @@ const EditorToolbar = ({ editor }: Props) => {
      ${active ? "bg-blue-100 text-blue-600" : "hover:bg-gray-100"}`;
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-1 p-2 border rounded-lg text-black bg-white shadow-sm mb-4 sticky top-4 z-10">
+    <div className="flex flex-wrap items-center justify-center gap-1 p-2 border border-gray-300 rounded-lg text-black bg-white shadow-sm mb-4 sticky top-4 z-10">
       {/* Text styles */}
       <button
         onClick={() => editor.chain().focus().toggleBold().run()}

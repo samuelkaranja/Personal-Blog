@@ -3,7 +3,7 @@ const TagInput = () => {
     <div>
       <label className="text-sm text-black font-medium">Tags</label>
       <input
-        className="mt-1 w-full border border-gray-600 rounded px-3 py-2 text-black text-sm placeholder:text-black"
+        className="mt-1 w-full border border-gray-600 rounded px-3 py-2 text-black text-sm placeholder:text-gray-500"
         placeholder="Add tag..."
       />
       <div className="flex gap-2 mt-3">
