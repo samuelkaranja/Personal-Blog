@@ -38,7 +38,7 @@ const Sidebar = () => {
         className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-md bg-white shadow"
         onClick={() => setOpen(true)}
       >
-        <Menu size={24} />
+        <Menu size={24} color={"black"} />
       </button>
 
       {/* Overlay */}

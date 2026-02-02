@@ -4,7 +4,7 @@ import Software from "../../assets/software.webp";
 
 const InsightsSection = () => {
   return (
-    <section className="py-20">
+    <section className="py-18">
       <Container>
         <div className="flex justify-between items-center mb-8 border-b-2 border-gray-300">
           <div className="mb-5">
