@@ -1,7 +1,10 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../dashboard/sidebar/Sidebar";
+import useScrollToTop from "../../hooks/useScrollToTop";
 
-const AdminLayout = () => {
+const AdminLayout: React.FC = () => {
+  useScrollToTop();
+
   return (
     <div className="min-h-screen bg-gray-50 flex">
       <Sidebar />
